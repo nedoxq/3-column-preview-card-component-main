@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+/* CSS RESET */
+
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* STYLES */
+
+body {
+    background-color: hsl(0, 0%, 95%);
+    display: grid;
+    place-content: center;
+    height: 100vh;
+}
+
+.main-container {
+    display: flex;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.main-container>section {
+    max-width: 305px;
+    height: 500px;
+    color: white;
+    font-family: 'Lexend Deca', sans-serif;
+    padding: 3rem;
+}
+
+.main-container>section p {
+    font-size: 0.95rem;
+    line-height: 1.6rem;
+    color: hsla(0, 0%, 100%, 0.7);
+}
+
+.main-container>section h1 {
+    font-family: 'Big Shoulders Display', cursive;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.main-container>section img {
+    margin-bottom: 2rem;
+}
+
+.btn {
+    background-color: white;
+    border: none;
+    padding-block: 0.95rem;
+    padding-inline: 2.2rem;
+    border-radius: 2rem;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 0.9rem;
+    margin-top: 5rem;
+    transition: 0.2s;
+    cursor: pointer;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+.sedans {
+    background-color: hsl(31, 77%, 52%);
+}
+
+.sedans .btn {
+    color: hsl(31, 77%, 52%);
+}
+
+.sedans .btn:hover {
+    background-color: hsl(31, 77%, 52%);
+}
+
+.suvs {
+    background-color: hsl(184, 100%, 22%);
+}
+
+.suvs .btn {
+    color: hsl(184, 100%, 22%);
+}
+
+.suvs .btn:hover {
+    background-color: hsl(184, 100%, 22%);
+}
+
+.luxury {
+    background-color: hsl(179, 100%, 13%);
+}
+
+.luxury .btn {
+    color: hsl(179, 100%, 13%);
+}
+
+.luxury .btn:hover {
+    background-color: hsl(179, 100%, 13%);
+}
+
+.btn:hover {
+    outline: 1px solid white;
+    color: white;
+}
+
+/* RESPONSIVE MEDIA QUERIES */
+
+@media (max-width:800px) {
+    .main-container {
+        flex-direction: column;
+        margin-top: 1.5rem;
+        margin-bottom: 4rem;
+        overflow: visible;
+    }
+
+    .main-container>section {
+        max-width: 325px;
+        height: 440px;
+        padding: 3rem;
+    }
+
+    .btn {
+        margin-top: 1.5rem;
+    }
+
+    body {
+        height: fit-content;
+    }
+
+    .sedans {
+        border-radius: 0.5rem 0.5rem 0 0;
+    }
+
+    .luxury {
+        border-radius: 0 0 0.5rem 0.5rem;
+    }
+}
